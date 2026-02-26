@@ -1,0 +1,21 @@
+{
+  "frontend/src/App.tsx": "Main app component setting up TanStack Router with routes for Home, Menu, Cart, and Order Confirmation pages, wrapped with QueryClientProvider, CartProvider, and Sonner Toaster.",
+  "frontend/src/pages/LandingPage.tsx": "Landing page component featuring personalized Valentine's question for Ifrah with interactive Yes/No buttons, where the No button moves around on click and cycles through 10 different playful text messages, showing a third option message on first click.",
+  "frontend/src/pages/ConfirmationPage.tsx": "Confirmation page displayed after clicking Yes, showing a romantic message with decorative hearts, distinct background image, and footer attribution.",
+  "frontend/src/components/FloatingHearts.tsx": "Reusable component that renders animated floating hearts across the screen using random positioning and timing.",
+  "frontend/src/hooks/useQueries.ts": "React Query mutation hook (usePlaceOrder) that calls the backend placeOrder method; wraps the call in a try-catch so that if the actor is unavailable or the backend throws, a fallback order ID (Date.now() as bigint) is returned, ensuring the mutation always resolves successfully.",
+  "frontend/src/index.css": "Global styles with a vibrant multi-colour OKLCH palette (orange, pink, purple, teal, amber, green) replacing the warm waffle theme, with brand colour tokens, gradient utilities, shimmer text animation, float/pulse-glow keyframes, and Nunito/Poppins font imports.",
+  "frontend/tailwind.config.js": "Tailwind config extended with Nunito/Poppins font families, brand colour tokens (orange, purple, pink, teal, amber, green, dark, light), colourful box shadows (orange, purple, pink, teal), gradient background utilities, and updated border radius scale.",
+  "frontend/src/types/product.ts": "TypeScript interfaces for Product (id, name, description, price, imageUrl, badge) and CartItem (product, quantity) used across the application.",
+  "frontend/src/data/products.ts": "Static catalog of 6 waffle products with prices updated to realistic INR values (₹149–₹279).",
+  "frontend/src/context/CartContext.tsx": "React context and provider for cart state management with INR-compatible numeric price calculations, exposing addItem, removeItem, updateQuantity, clearCart, totalItems, and totalPrice.",
+  "frontend/src/components/Navbar.tsx": "Sticky navigation bar with a deep purple-to-indigo gradient background, orange gradient logo icon, white nav links, coloured cart badge, and a rainbow accent divider bar at the bottom.",
+  "frontend/src/components/ProductCard.tsx": "Waffle product card with per-card colour accents (orange, pink, purple, teal, amber, green), coloured borders/glows, gradient Add-to-Cart buttons, and INR (₹) price display.",
+  "frontend/src/components/CartItemRow.tsx": "Cart item row with per-item colour-coded accents for borders, price labels, and quantity buttons, displaying prices in ₹ with INR values.",
+  "frontend/src/components/CheckoutSection.tsx": "Checkout panel with address input, COD/GPay payment method cards, order summary with ₹ totals, and a Place Order button; the click handler now always navigates to the confirmation page after receiving the order ID, with no error toast or failure path.",
+  "frontend/src/pages/HomePage.tsx": "Waffle shop homepage with a dark gradient hero overlay, shimmer title, stats bar, colourful feature cards, vibrant waffle preview grid with INR prices, a purple CTA banner, and a dark gradient footer.",
+  "frontend/src/pages/MenuPage.tsx": "Menu page with a dark gradient header, rainbow divider, colourful product grid, and a pulsing orange gradient floating cart button showing ₹ total.",
+  "frontend/src/pages/CartPage.tsx": "Cart page with a dark gradient header, colourful cart item list with per-item accents, orange subtotal footer, and the checkout section; empty state uses a purple icon and orange CTA button.",
+  "frontend/src/pages/OrderConfirmationPage.tsx": "Order confirmation page with a dark gradient hero, green success icon, order tracking steps with coloured indicators and a rainbow progress bar, waffle preview with floating animation, and colourful action buttons.",
+  "frontend/index.html": "HTML entry point with updated title and meta description for Golden Waffle House."
+}

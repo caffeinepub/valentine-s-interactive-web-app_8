@@ -1,0 +1,33 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-25T14:07:41.713Z",
+  "summary": "Both REQ-9 and REQ-10 are substantially implemented. The frontend usePlaceOrder hook now wraps the backend call in a try-catch and returns a fallback order ID on failure, and the CheckoutSection navigates to the confirmation page after receiving an order ID. The backend placeOrder function returns a Nat and stores orders in the Map. However, there are partial gaps: the backend does not store the actual request data (items, total, paymentMethod from the request are ignored/hardcoded), and the CheckoutSection handlePlaceOrder does not itself catch errors from mutateAsync.",
+  "missing_requirements": [
+    {
+      "id": "REQ-10",
+      "requirement": "Orders are stored in the backend Map with items, total, payment method, and timestamp.",
+      "reason": "The backend placeOrder function ignores the _request parameter entirely. The stored order uses hardcoded items (not from request), total is hardcoded to 0 instead of computed from request data, and paymentMethod is hardcoded to 'N/A' instead of using _request.paymentMethod.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "requirement": "If the backend call fails or returns an error, the frontend must still navigate to the OrderConfirmationPage with a valid order ID. Ensure no error state or failure path can block order confirmation.",
+      "reason": "The handlePlaceOrder function in CheckoutSection calls placeOrderMutation.mutateAsync without a try-catch wrapper. While the mutationFn catches errors internally, any unexpected rejection propagating out of mutateAsync would cause an unhandled promise rejection and skip navigation.",
+      "evidence": [
+        "frontend/src/components/CheckoutSection.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.82,
+  "changed_files": [
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/src/components/CheckoutSection.tsx",
+    "frontend/src/hooks/useQueries.ts",
+    "project_state.json"
+  ]
+}

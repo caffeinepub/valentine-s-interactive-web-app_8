@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "A waffle shop website where customers can browse and order waffles, add items to a cart, and checkout using either Cash on Delivery (COD) or GPay. Orders should always be generated successfully. The interface should be fully colourful and attractive, with pricing displayed in Indian Rupees (₹).",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-design-and-implement-a-visually-appealing-waffle-shop-homepage-with-a-warm-golden-brown-color-palette-featuring-a-hero-banner-shop-name-logo-area-and-navigation-links-to-the-menu-and-cart",
+      "title": "Design and implement a visually appealing waffle shop homepage with a warm, golden-brown color palette, featuring a hero banner, shop name/logo area, and navigation links to the menu and cart.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-menu-product-listing-page-displaying-at-least-6-waffle-options-e-g-classic-butter-waffle-chocolate-waffle-strawberry-waffle-blueberry-waffle-belgian-waffle-cheese-waffle-with-name-description-price-and-an-add-to-cart-button-for-each",
+      "title": "Create a menu/product listing page displaying at least 6 waffle options (e.g., Classic Butter Waffle, Chocolate Waffle, Strawberry Waffle, Blueberry Waffle, Belgian Waffle, Cheese Waffle) with name, description, price, and an 'Add to Cart' button for each.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-shopping-cart-that-shows-all-added-items-with-quantities-individual-prices-and-a-total-price-summary-users-should-be-able-to-increase-decrease-quantity-or-remove-items-from-the-cart",
+      "title": "Implement a shopping cart that shows all added items with quantities, individual prices, and a total price summary. Users should be able to increase/decrease quantity or remove items from the cart.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-checkout-section-within-the-cart-view-that-presents-two-payment-method-options-cash-on-delivery-cod-and-gpay-the-customer-selects-one-before-placing-the-order",
+      "title": "Add a checkout section within the cart view that presents two payment method options: 'Cash on Delivery (COD)' and 'GPay'. The customer selects one before placing the order.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-order-placement-logic-so-that-clicking-place-order-always-creates-and-confirms-an-order-successfully-storing-the-order-items-total-payment-method-timestamp-in-the-backend-show-a-success-confirmation-screen-with-an-order-id-after-placement",
+      "title": "Implement order placement logic so that clicking 'Place Order' always creates and confirms an order successfully, storing the order (items, total, payment method, timestamp) in the backend. Show a success confirmation screen with an order ID after placement.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-valentine-s-day-theme-and-all-its-components-entirely-with-the-new-waffle-shop-branding-removing-all-valentine-specific-pages-animations-and-styles",
+      "title": "Replace the existing Valentine's Day theme and all its components entirely with the new waffle shop branding, removing all valentine-specific pages, animations, and styles.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-entire-frontend-with-a-fully-colourful-and-visually-vibrant-theme-replace-the-current-warm-golden-brown-palette-with-a-rich-multi-colour-scheme-that-incorporates-bold-gradients-vivid-accent-colours-e-g-deep-orange-berry-purple-strawberry-red-syrup-amber-chocolate-brown-cream-white-colourful-section-backgrounds-and-eye-catching-typography-apply-the-redesign-consistently-across-all-pages-homepage-menupage-cartpage-and-orderconfirmationpage-as-well-as-navbar-productcard-cartitemrow-and-checkoutsection-components",
+      "title": "Redesign the entire frontend with a fully colourful and visually vibrant theme. Replace the current warm golden-brown palette with a rich multi-colour scheme that incorporates bold gradients, vivid accent colours (e.g., deep orange, berry purple, strawberry red, syrup amber, chocolate brown, cream white), colourful section backgrounds, and eye-catching typography. Apply the redesign consistently across all pages: HomePage, MenuPage, CartPage, and OrderConfirmationPage, as well as Navbar, ProductCard, CartItemRow, and CheckoutSection components.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-product-prices-in-frontend-src-data-products-ts-and-every-component-that-displays-prices-productcard-cartitemrow-checkoutsection-orderconfirmationpage-to-use-indian-rupees-replace-any-or-other-currency-symbols-with-and-set-realistic-inr-price-values-for-each-of-the-six-waffle-products-e-g-149-299-range",
+      "title": "Update all product prices in frontend/src/data/products.ts and every component that displays prices (ProductCard, CartItemRow, CheckoutSection, OrderConfirmationPage) to use Indian Rupees. Replace any '$' or other currency symbols with '₹' and set realistic INR price values for each of the six waffle products (e.g., ₹149 – ₹299 range).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-useplaceorder-mutation-in-frontend-src-hooks-usequeries-ts-and-the-checkoutsection-component-so-that-clicking-place-order-always-completes-successfully-regardless-of-payment-method-cod-or-gpay-if-the-backend-call-fails-or-returns-an-error-the-frontend-must-still-navigate-to-the-orderconfirmationpage-with-a-valid-order-id-ensure-no-error-state-or-failure-path-can-block-order-confirmation",
+      "title": "Update the usePlaceOrder mutation in frontend/src/hooks/useQueries.ts and the CheckoutSection component so that clicking 'Place Order' always completes successfully regardless of payment method (COD or GPay). If the backend call fails or returns an error, the frontend must still navigate to the OrderConfirmationPage with a valid order ID. Ensure no error state or failure path can block order confirmation.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Waffle shop website with product listing and ordering functionality",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Shopping cart with add-to-cart functionality",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Payment options: Cash on Delivery (COD) and GPay at checkout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Orders always generate successfully regardless of payment method",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Fully colourful and attractive UI redesign",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Display all pricing in Indian Rupees (₹)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Update the backend placeOrder function in backend/main.mo to ensure it always returns a successful order ID and never traps or returns an error variant. The function should reliably store the order (items, total, payment method, timestamp) in the in-memory Map and return the generated order ID on every invocation.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Waffle Shop",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
