@@ -10,21 +10,21 @@ export default function HomePage() {
       title: 'Premium Quality',
       desc: 'Made with the finest ingredients every morning',
       gradient: 'linear-gradient(135deg, oklch(0.68 0.22 38), oklch(0.72 0.22 60))',
-      bg: 'linear-gradient(135deg, oklch(0.96 0.05 38), oklch(0.97 0.04 60))',
+      bg: 'linear-gradient(135deg, oklch(0.22 0.07 38), oklch(0.25 0.06 60))',
     },
     {
       icon: <Flame className="w-6 h-6" />,
       title: 'Fresh Daily',
       desc: 'Baked fresh to order, never pre-made',
       gradient: 'linear-gradient(135deg, oklch(0.65 0.22 355), oklch(0.60 0.22 320))',
-      bg: 'linear-gradient(135deg, oklch(0.96 0.05 355), oklch(0.97 0.04 320))',
+      bg: 'linear-gradient(135deg, oklch(0.22 0.07 355), oklch(0.24 0.06 320))',
     },
     {
       icon: <Truck className="w-6 h-6" />,
       title: 'Fast Delivery',
       desc: 'Hot waffles delivered to your door',
       gradient: 'linear-gradient(135deg, oklch(0.52 0.22 295), oklch(0.62 0.22 260))',
-      bg: 'linear-gradient(135deg, oklch(0.96 0.04 295), oklch(0.97 0.03 260))',
+      bg: 'linear-gradient(135deg, oklch(0.22 0.07 295), oklch(0.24 0.06 260))',
     },
   ];
 
@@ -48,7 +48,7 @@ export default function HomePage() {
           {/* Gradient overlay */}
           <div
             className="absolute inset-0"
-            style={{ background: 'linear-gradient(135deg, oklch(0.12 0.08 280 / 0.92) 0%, oklch(0.18 0.10 295 / 0.75) 50%, oklch(0.15 0.08 320 / 0.50) 100%)' }}
+            style={{ background: 'linear-gradient(135deg, oklch(0.10 0.08 280 / 0.95) 0%, oklch(0.16 0.10 295 / 0.80) 50%, oklch(0.13 0.08 320 / 0.55) 100%)' }}
           />
 
           {/* Decorative circles */}
@@ -112,7 +112,7 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="py-14 sm:py-18" style={{ background: 'oklch(0.97 0.01 280)' }}>
+      <section className="py-14 sm:py-18 bg-background">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-black text-foreground mb-2">
@@ -125,7 +125,7 @@ export default function HomePage() {
               <div
                 key={i}
                 className="waffle-card-hover flex flex-col items-center text-center gap-4 p-7 rounded-2xl animate-slide-up"
-                style={{ background: f.bg, border: '2px solid transparent', boxShadow: '0 4px 20px oklch(0.52 0.22 295 / 0.08)' }}
+                style={{ background: f.bg, border: '2px solid oklch(1 0 0 / 10%)', boxShadow: '0 4px 20px oklch(0.10 0.08 280 / 0.30)' }}
               >
                 <div
                   className="w-14 h-14 rounded-2xl flex items-center justify-center text-white shadow-card"
@@ -168,7 +168,7 @@ export default function HomePage() {
                 <img src={w.src} alt={w.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                 <div
                   className="absolute inset-0 flex flex-col items-start justify-end p-4"
-                  style={{ background: 'linear-gradient(to top, oklch(0.12 0.08 280 / 0.85) 0%, transparent 60%)' }}
+                  style={{ background: 'linear-gradient(to top, oklch(0.10 0.08 280 / 0.90) 0%, transparent 60%)' }}
                 >
                   <span className="text-white font-black text-sm sm:text-base">{w.name}</span>
                   <span className="font-black text-sm" style={{ color: w.color }}>{w.price}</span>
@@ -205,7 +205,8 @@ export default function HomePage() {
           </p>
           <button
             onClick={() => navigate({ to: '/menu' })}
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-base font-black text-foreground bg-white shadow-card-lg transition-all duration-200 hover:scale-105 active:scale-95"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-base font-black shadow-card-lg transition-all duration-200 hover:scale-105 active:scale-95"
+            style={{ background: 'oklch(0.14 0.05 285)', color: 'oklch(0.95 0.01 85)' }}
           >
             Order Now
             <ChevronRight className="w-5 h-5" />
@@ -214,7 +215,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-10 mt-4" style={{ background: 'linear-gradient(135deg, oklch(0.18 0.08 280), oklch(0.25 0.10 295))' }}>
+      <footer className="py-10 mt-4" style={{ background: 'linear-gradient(135deg, oklch(0.10 0.06 280), oklch(0.16 0.08 295))' }}>
         <div className="max-w-6xl mx-auto px-6 sm:px-8 text-center space-y-3">
           <div className="flex items-center justify-center gap-2 mb-2">
             <div

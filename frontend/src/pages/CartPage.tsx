@@ -53,9 +53,9 @@ export default function CartPage() {
           <div className="flex flex-col items-center justify-center py-20 text-center">
             <div
               className="w-24 h-24 rounded-3xl flex items-center justify-center mb-6 animate-bounce-in"
-              style={{ background: 'linear-gradient(135deg, oklch(0.96 0.05 295), oklch(0.97 0.04 320))' }}
+              style={{ background: 'linear-gradient(135deg, oklch(0.22 0.07 295), oklch(0.25 0.06 320))' }}
             >
-              <UtensilsCrossed className="w-12 h-12" style={{ color: 'oklch(0.52 0.22 295)' }} />
+              <UtensilsCrossed className="w-12 h-12" style={{ color: 'oklch(0.62 0.22 295)' }} />
             </div>
             <h2 className="text-2xl font-black text-foreground mb-2">Your cart is empty!</h2>
             <p className="text-muted-foreground font-semibold mb-8 max-w-sm">
@@ -76,15 +76,15 @@ export default function CartPage() {
             <div className="lg:col-span-3">
               <div
                 className="bg-card rounded-2xl overflow-hidden shadow-card-lg"
-                style={{ border: '2px solid oklch(0.90 0.03 280)' }}
+                style={{ border: '2px solid oklch(1 0 0 / 10%)' }}
               >
                 {/* Cart header */}
                 <div
                   className="px-5 py-4 flex items-center justify-between"
-                  style={{ background: 'linear-gradient(135deg, oklch(0.96 0.04 295), oklch(0.97 0.03 320))' }}
+                  style={{ background: 'linear-gradient(135deg, oklch(0.22 0.07 295), oklch(0.25 0.06 320))' }}
                 >
                   <h2 className="font-black text-foreground flex items-center gap-2">
-                    <ShoppingCart className="w-4 h-4" style={{ color: 'oklch(0.52 0.22 295)' }} />
+                    <ShoppingCart className="w-4 h-4" style={{ color: 'oklch(0.62 0.22 295)' }} />
                     Cart Items
                   </h2>
                   <span
@@ -102,10 +102,10 @@ export default function CartPage() {
                 {/* Cart footer total */}
                 <div
                   className="px-5 py-4 flex items-center justify-between"
-                  style={{ background: 'linear-gradient(135deg, oklch(0.96 0.04 38), oklch(0.97 0.03 60))' }}
+                  style={{ background: 'linear-gradient(135deg, oklch(0.22 0.07 38), oklch(0.25 0.06 60))' }}
                 >
                   <span className="font-black text-foreground">Subtotal</span>
-                  <span className="text-xl font-black" style={{ color: 'oklch(0.68 0.22 38)' }}>₹{totalPrice}</span>
+                  <span className="text-xl font-black" style={{ color: 'oklch(0.72 0.22 38)' }}>₹{totalPrice}</span>
                 </div>
               </div>
             </div>

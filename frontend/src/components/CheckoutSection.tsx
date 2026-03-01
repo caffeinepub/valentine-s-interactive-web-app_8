@@ -61,7 +61,7 @@ export default function CheckoutSection() {
   const grandTotal = totalPrice + deliveryFee;
 
   return (
-    <div className="bg-card rounded-2xl overflow-hidden shadow-card-lg" style={{ border: '2px solid oklch(0.90 0.03 280)' }}>
+    <div className="bg-card rounded-2xl overflow-hidden shadow-card-lg" style={{ border: '2px solid oklch(1 0 0 / 10%)' }}>
       {/* Header */}
       <div className="px-5 py-4 flex items-center gap-3" style={{
         background: 'linear-gradient(135deg, oklch(0.18 0.08 280), oklch(0.25 0.10 295))'
@@ -83,9 +83,9 @@ export default function CheckoutSection() {
             onChange={e => setDeliveryAddress(e.target.value)}
             placeholder="Enter your delivery address..."
             className="w-full px-4 py-3 rounded-xl border-2 bg-background text-foreground placeholder:text-muted-foreground text-sm font-semibold focus:outline-none transition-all duration-200"
-            style={{ borderColor: 'oklch(0.90 0.03 280)' }}
+            style={{ borderColor: 'oklch(1 0 0 / 15%)' }}
             onFocus={e => (e.currentTarget.style.borderColor = 'oklch(0.68 0.22 38)')}
-            onBlur={e => (e.currentTarget.style.borderColor = 'oklch(0.90 0.03 280)')}
+            onBlur={e => (e.currentTarget.style.borderColor = 'oklch(1 0 0 / 15%)')}
           />
         </div>
 
@@ -101,8 +101,8 @@ export default function CheckoutSection() {
                   onClick={() => setSelectedPayment(option.id)}
                   className="flex items-center gap-3 p-4 rounded-xl text-left transition-all duration-200 hover:scale-[1.02]"
                   style={{
-                    border: isSelected ? '2px solid transparent' : '2px solid oklch(0.90 0.03 280)',
-                    background: isSelected ? option.gradient : 'oklch(var(--card))',
+                    border: isSelected ? '2px solid transparent' : '2px solid oklch(1 0 0 / 15%)',
+                    background: isSelected ? option.gradient : 'oklch(0.22 0.06 285)',
                     boxShadow: isSelected ? '0 8px 24px oklch(0.52 0.22 295 / 0.20)' : 'none',
                   }}
                 >
@@ -130,9 +130,9 @@ export default function CheckoutSection() {
         {/* Order Summary */}
         <div
           className="rounded-xl p-4 space-y-2"
-          style={{ background: 'linear-gradient(135deg, oklch(0.96 0.04 38), oklch(0.97 0.03 60))' }}
+          style={{ background: 'linear-gradient(135deg, oklch(0.22 0.07 38), oklch(0.25 0.06 60))' }}
         >
-          <p className="text-xs font-black uppercase tracking-widest mb-3" style={{ color: 'oklch(0.68 0.22 38)' }}>
+          <p className="text-xs font-black uppercase tracking-widest mb-3" style={{ color: 'oklch(0.72 0.22 38)' }}>
             Order Summary
           </p>
           <div className="flex justify-between text-sm font-semibold text-foreground">
@@ -145,10 +145,10 @@ export default function CheckoutSection() {
           </div>
           <div
             className="flex justify-between font-black text-base pt-2 mt-1"
-            style={{ borderTop: '2px dashed oklch(0.68 0.22 38 / 0.30)' }}
+            style={{ borderTop: '2px dashed oklch(0.72 0.22 38 / 0.40)' }}
           >
             <span className="text-foreground">Total</span>
-            <span style={{ color: 'oklch(0.68 0.22 38)' }}>₹{grandTotal}</span>
+            <span style={{ color: 'oklch(0.72 0.22 38)' }}>₹{grandTotal}</span>
           </div>
         </div>
 
@@ -160,7 +160,7 @@ export default function CheckoutSection() {
           style={{
             background: selectedPayment
               ? 'linear-gradient(135deg, oklch(0.68 0.22 38), oklch(0.72 0.22 355))'
-              : 'oklch(0.75 0.02 280)',
+              : 'oklch(0.26 0.05 285)',
             boxShadow: selectedPayment ? '0 8px 24px oklch(0.68 0.22 38 / 0.35)' : 'none',
           }}
         >

@@ -1,59 +1,33 @@
 {
   "kind": "build_request",
-  "title": "Ensure all orders always generate successfully",
+  "title": "Publish current draft as live version",
   "projectName": "Golden Waffle House",
-  "priority": "high",
+  "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-9",
-      "text": "Update the usePlaceOrder mutation in frontend/src/hooks/useQueries.ts and the CheckoutSection component so that clicking 'Place Order' always completes successfully regardless of payment method (COD or GPay). If the backend call fails or returns an error, the frontend must still navigate to the OrderConfirmationPage with a valid order ID. Ensure no error state or failure path can block order confirmation.",
-      "target": "frontend",
+      "id": "REQ-1",
+      "text": "Publish the current draft (Version 10 with the darker background theme) as the live production version without any modifications.",
+      "target": "both",
       "source": {
         "messageIds": [
-          "msg-3"
+          "msg-4"
         ],
         "quotes": [
-          "Let everything be the same just let all order's generate successfully."
+          "Please publish this draft for me as it is."
         ]
       },
       "acceptanceCriteria": [
-        "Clicking 'Place Order' with COD selected always navigates to the OrderConfirmationPage with an order ID.",
-        "Clicking 'Place Order' with GPay selected always navigates to the OrderConfirmationPage with an order ID.",
-        "No error message or failure screen is shown after clicking 'Place Order'.",
-        "The order ID displayed on the confirmation page is a non-empty value.",
-        "All existing UI, colours, prices (₹), and layout remain unchanged."
-      ]
-    },
-    {
-      "id": "REQ-10",
-      "text": "Update the backend placeOrder function in backend/main.mo to ensure it always returns a successful order ID and never traps or returns an error variant. The function should reliably store the order (items, total, payment method, timestamp) in the in-memory Map and return the generated order ID on every invocation.",
-      "target": "backend",
-      "source": {
-        "messageIds": [
-          "msg-3"
-        ],
-        "quotes": [
-          "Let everything be the same just let all order's generate successfully."
-        ]
-      },
-      "acceptanceCriteria": [
-        "The placeOrder backend function returns a valid order ID on every call.",
-        "Orders are stored in the backend Map with items, total, payment method, and timestamp.",
-        "No trap or error variant is returned by placeOrder under any valid input.",
-        "Existing backend functions (getOrder, getAllOrders, getOrderStatus, getOrderConfirmation) continue to work correctly."
+        "The current draft state, including the dark background theme, is deployed as the live version.",
+        "No code changes are made — the build reflects the draft exactly as it stands."
       ]
     }
   ],
   "constraints": [
-    "Do not change any visual design, colour scheme, typography, or layout.",
-    "Do not change product data or pricing in frontend/src/data/products.ts.",
-    "Do not modify any immutable frontend paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui."
+    "Do not modify any code, styles, or content — publish the draft exactly as-is."
   ],
   "nonGoals": [
-    "No new pages or UI sections.",
-    "No changes to cart functionality.",
-    "No changes to the checkout form fields or payment method UI.",
-    "No changes to product listings or menu page."
+    "Making any visual or functional changes before publishing.",
+    "Reverting to a previous version."
   ],
   "imageRequirements": {
     "required": [],

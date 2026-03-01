@@ -75,13 +75,13 @@ export default function OrderConfirmationPage() {
         {/* Order Tracking Steps */}
         <div
           className="bg-card rounded-2xl overflow-hidden shadow-card-lg"
-          style={{ border: '2px solid oklch(0.90 0.03 280)' }}
+          style={{ border: '2px solid oklch(1 0 0 / 10%)' }}
         >
           <div
             className="px-5 py-4 flex items-center gap-2"
-            style={{ background: 'linear-gradient(135deg, oklch(0.96 0.04 295), oklch(0.97 0.03 320))' }}
+            style={{ background: 'linear-gradient(135deg, oklch(0.22 0.07 295), oklch(0.25 0.06 320))' }}
           >
-            <Clock className="w-4 h-4" style={{ color: 'oklch(0.52 0.22 295)' }} />
+            <Clock className="w-4 h-4" style={{ color: 'oklch(0.62 0.22 295)' }} />
             <h2 className="font-black text-foreground">Order Status</h2>
           </div>
           <div className="p-5">
@@ -93,7 +93,7 @@ export default function OrderConfirmationPage() {
                     style={{
                       background: step.done
                         ? `linear-gradient(135deg, ${step.color}, ${step.color.replace(')', ' / 0.7)')})`
-                        : 'oklch(0.95 0.02 280)',
+                        : 'oklch(0.24 0.06 285)',
                       boxShadow: step.done ? `0 4px 12px ${step.color.replace(')', ' / 0.30)')}` : 'none',
                     }}
                   >
@@ -101,21 +101,15 @@ export default function OrderConfirmationPage() {
                   </div>
                   <span
                     className="text-xs font-black text-center"
-                    style={{ color: step.done ? step.color : 'oklch(0.65 0.04 280)' }}
+                    style={{ color: step.done ? step.color : 'oklch(0.55 0.04 285)' }}
                   >
                     {step.label}
                   </span>
-                  {i < steps.length - 1 && (
-                    <div
-                      className="absolute"
-                      style={{ display: 'none' }}
-                    />
-                  )}
                 </div>
               ))}
             </div>
             {/* Progress bar */}
-            <div className="mt-4 h-2 rounded-full overflow-hidden" style={{ background: 'oklch(0.93 0.02 280)' }}>
+            <div className="mt-4 h-2 rounded-full overflow-hidden" style={{ background: 'oklch(0.24 0.06 285)' }}>
               <div
                 className="h-full rounded-full transition-all duration-1000"
                 style={{
@@ -133,13 +127,13 @@ export default function OrderConfirmationPage() {
         {/* Delivery Info */}
         <div
           className="bg-card rounded-2xl overflow-hidden shadow-card"
-          style={{ border: '2px solid oklch(0.90 0.03 280)' }}
+          style={{ border: '2px solid oklch(1 0 0 / 10%)' }}
         >
           <div
             className="px-5 py-4 flex items-center gap-2"
-            style={{ background: 'linear-gradient(135deg, oklch(0.96 0.05 38), oklch(0.97 0.04 60))' }}
+            style={{ background: 'linear-gradient(135deg, oklch(0.22 0.07 38), oklch(0.25 0.06 60))' }}
           >
-            <MapPin className="w-4 h-4" style={{ color: 'oklch(0.68 0.22 38)' }} />
+            <MapPin className="w-4 h-4" style={{ color: 'oklch(0.72 0.22 38)' }} />
             <h2 className="font-black text-foreground">Delivery Details</h2>
           </div>
           <div className="p-5 space-y-3">
@@ -162,11 +156,11 @@ export default function OrderConfirmationPage() {
         {/* Waffle Preview */}
         <div
           className="bg-card rounded-2xl overflow-hidden shadow-card"
-          style={{ border: '2px solid oklch(0.90 0.03 280)' }}
+          style={{ border: '2px solid oklch(1 0 0 / 10%)' }}
         >
           <div
             className="px-5 py-4"
-            style={{ background: 'linear-gradient(135deg, oklch(0.96 0.04 355), oklch(0.97 0.03 320))' }}
+            style={{ background: 'linear-gradient(135deg, oklch(0.22 0.07 355), oklch(0.24 0.06 320))' }}
           >
             <h2 className="font-black text-foreground">Your Delicious Order 🧇</h2>
           </div>
@@ -204,12 +198,8 @@ export default function OrderConfirmationPage() {
           </button>
           <button
             onClick={() => navigate({ to: '/' })}
-            className="flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl text-base font-black border-2 transition-all duration-200 hover:scale-105 active:scale-95"
-            style={{
-              borderColor: 'oklch(0.52 0.22 295)',
-              color: 'oklch(0.52 0.22 295)',
-              background: 'oklch(0.96 0.04 295)',
-            }}
+            className="flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl text-base font-black text-foreground transition-all duration-200 hover:scale-105 active:scale-95"
+            style={{ background: 'oklch(0.24 0.06 285)', border: '2px solid oklch(1 0 0 / 15%)' }}
           >
             <Home className="w-5 h-5" />
             Back to Home
